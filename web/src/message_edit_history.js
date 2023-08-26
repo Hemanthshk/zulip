@@ -157,7 +157,8 @@ export function show_history(message) {
         focus_submit_on_open: true,
         single_footer_button: true,
         post_render() {
-            fetch_and_render_message_history(message);
+            const message_id = $("#message-history").attr("data-message-id");
+            fetch_and_render_message_history(message_id);
         },
     });
 }
